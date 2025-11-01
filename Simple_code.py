@@ -8,7 +8,6 @@ def fetch_gene_sequence(accession):
     return response.text
 
 
-
 team = [
     {
         "name": "Svetlana",
@@ -17,7 +16,7 @@ team = [
         "hobby": "Playing piano",
         "affiliation": "Queen’s University Belfast",
         "gene": "TP53",
-        "accession": "NM_000546"   # TP53 gene accession
+        "accession": "NM_000546"
     },
     {
         "name": "Santosh Timilsina",
@@ -26,7 +25,7 @@ team = [
         "hobby": "Tennis",
         "affiliation": "University of Texas at San Antonio",
         "gene": "IFNB1",
-        "accession": "NM_002176"   # IFNB gene
+        "accession": "NM_002176"
     },
     {
         "name": "Gideon Danso",
@@ -35,7 +34,7 @@ team = [
         "hobby": "Listening to music",
         "affiliation": "University of Cape Coast",
         "gene": "BRCA2",
-        "accession": "NM_000059"   # BRCA2 gene
+        "accession": "NM_000059"
     },
     {
         "name": "Mosunmola Temitope Christianah",
@@ -44,7 +43,7 @@ team = [
         "hobby": "Cooking",
         "affiliation": "Obafemi Awolowo University",
         "gene": "TNNT2",
-        "accession": "NM_001001430"  # TNNT2 gene
+        "accession": "NM_001001430"
     },
     {
         "name": "Hana E",
@@ -53,7 +52,7 @@ team = [
         "hobby": "Hiking",
         "affiliation": "Boise State University",
         "gene": "glnD",
-        "accession": "AF002837"   # glnD gene (example bacterial gene)
+        "accession": "AF002837"
     },
     {
         "name": "Jegede Judah Olayemi",
@@ -62,10 +61,18 @@ team = [
         "hobby": "Playing Soccer",
         "affiliation": "Obafemi Awolowo University",
         "gene": "POSTN",
-        "accession": "NM_001330358"  # POSTN gene
+        "accession": "NM_001330358"
+    },
+    {
+        "name": "Adewumi Esther Adeola",
+        "slack": "adewumiesther",
+        "country": "Nigeria",
+        "hobby": "Cooking",
+        "affiliation": "Obafemi Awolowo University",
+        "gene": "TP53",
+        "accession": "NM_000546"
     }
 ]
-
 
 
 #We are Printing the team info and DNA
@@ -79,6 +86,5 @@ for person in team:
     
     dna = fetch_gene_sequence(person["accession"])
     print("DNA sequence:")
-    print(dna[:200], "...")  # print only first 200 letters to keep output short
-    
+    print(dna[:200], "...")  # print only first 200 letters
     print("-" * 60)
